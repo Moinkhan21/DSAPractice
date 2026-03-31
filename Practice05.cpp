@@ -4,7 +4,7 @@ using namespace std;
 bool findingNumberisPrime(int n) {
 
     if( n <= 1) return false;
-    
+
     for(int i = 2; i < n; i++) {
         if((n % i) == 0) {
             return false;
@@ -25,4 +25,6 @@ int main() {
     else {
         cout << n << " Number is not prime";
     }
+
+    return 0;
 }
