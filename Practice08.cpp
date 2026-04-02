@@ -2,25 +2,56 @@
 #include <vector>
 using namespace std;
 
-vector<double> findingTempurater(double celsius) {
- 
-    double k = celsius + 273.15;
-    double f = celsius * 1.80 + 32.00;
+// ======================================================================
+// FUNCTION: findingTemperature()
+// ----------------------------------------------------------------------
+// PURPOSE:
+//   Converts temperature from Celsius to:
+//     • Kelvin
+//     • Fahrenheit
+//
+// FORMULAS:
+//
+//   Kelvin     = Celsius + 273.15
+//   Fahrenheit = Celsius × 1.8 + 32
+//
+// RETURN:
+//   vector<double>
+//     index 0 → Kelvin
+//     index 1 → Fahrenheit
+//
+// TIME COMPLEXITY: O(1)
+// ======================================================================
+vector<double> findingTemperature(double celsius) {
 
-    vector<double> v;
-    v.push_back(k);
-    v.push_back(f);
-    return v;
+    // Convert to Kelvin
+    double kelvin = celsius + 273.15;
+
+    // Convert to Fahrenheit
+    double fahrenheit = celsius * 1.80 + 32.00;
+
+    // Store results
+    vector<double> result;
+    result.push_back(kelvin);
+    result.push_back(fahrenheit);
+
+    return result;
 }
 
+// ======================================================================
+// MAIN FUNCTION
+// ======================================================================
 int main() {
 
+    double celsius;
+
     cout << "Enter temperature in Celsius: ";
-    double c;
-    cin >> c;
+    cin >> celsius;
 
-    vector<double> result = findingTempurater(c);
+    // Call conversion function
+    vector<double> result = findingTemperature(celsius);
 
+    // Output results
     cout << "Kelvin: " << result[0] << endl;
     cout << "Fahrenheit: " << result[1] << endl;
 
