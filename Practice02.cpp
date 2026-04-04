@@ -1,25 +1,47 @@
 #include <iostream>
 using namespace std;
 
-bool numberEvenorOdd(int n) {
-    if(n % 2 == 0) {
+// ======================================================================
+// FUNCTION: isEven()
+// ----------------------------------------------------------------------
+// PURPOSE:
+//   Checks whether a number is EVEN or ODD using modulus operator.
+//
+// CORE IDEA:
+//   • Even → divisible by 2 → remainder = 0
+//   • Odd  → remainder = 1
+//
+// EXPRESSION:
+//   n % 2
+//
+// TIME COMPLEXITY: O(1)
+// ======================================================================
+bool isEven(int n) {
+
+    // If remainder is 0 → even
+    if (n % 2 == 0) {
         return true;
     }
-    else {
-        return false;
-    }
+
+    return false;
 }
 
+// ======================================================================
+// MAIN FUNCTION
+// ======================================================================
 int main() {
-    cout << "Enter a number: ";
+
     int n;
+
+    cout << "Enter a number: ";
     cin >> n;
 
-    bool numberIsEven = numberEvenorOdd(n);
+    bool numberIsEven = isEven(n);
 
-    if(numberIsEven) {
+    if (numberIsEven) {
         cout << "The number is Even";
-    }else {
+    }
+    else {
         cout << "The number is Odd";
     }
 
