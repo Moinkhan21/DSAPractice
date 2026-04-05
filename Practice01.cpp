@@ -1,19 +1,40 @@
 #include <iostream>
 using namespace std;
 
-int calculateAreaOfCircle(int r) {
-  int areaOfCircle = 3.14*r*r;
-  return areaOfCircle;
+// ======================================================================
+// FUNCTION: calculateAreaOfCircle()
+// ----------------------------------------------------------------------
+// PURPOSE:
+//   Calculates the area of a circle.
+//
+// FORMULA:
+//   Area = π × r × r
+//
+// NOTE:
+//   • Using double for better precision
+//
+// TIME COMPLEXITY: O(1)
+// ======================================================================
+double calculateAreaOfCircle(double r) {
+
+    const double PI = 3.14159;   // Better precision
+
+    return PI * r * r;
 }
 
+// ======================================================================
+// MAIN FUNCTION
+// ======================================================================
 int main() {
 
-  cout << "Enter size of radius: ";
-  int r;
-  cin >> r;
+    double r;
 
-  int areaOfCircle = calculateAreaOfCircle(r);
+    cout << "Enter radius: ";
+    cin >> r;
 
-  cout << "The area of circule is : " << areaOfCircle << endl;
-  return 0;
+    double area = calculateAreaOfCircle(r);
+
+    cout << "Area of circle is: " << area << endl;
+
+    return 0;
 }
