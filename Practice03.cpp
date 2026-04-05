@@ -1,30 +1,44 @@
 #include <iostream>
 using namespace std;
 
-bool numberEvenOrOdd(int n){
+// ======================================================================
+// FUNCTION: isOdd()
+// ----------------------------------------------------------------------
+// PURPOSE:
+//   Determines whether a number is ODD using bitwise operator.
+//
+// CORE IDEA:
+//   • Binary representation:
+//       Even → last bit = 0
+//       Odd  → last bit = 1
+//
+// BITWISE CHECK:
+//   n & 1 → extracts last bit
+//
+// TIME COMPLEXITY: O(1)
+// ======================================================================
+bool isOdd(int n) {
 
-    if((n & 1) != 0) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    // If last bit is 1 → odd
+    return (n & 1);
 }
 
+// ======================================================================
+// MAIN FUNCTION
+// ======================================================================
 int main() {
-    
-    cout << "Enter a number: ";
+
     int n;
+
+    cout << "Enter a number: ";
     cin >> n;
 
-    bool numberIsOdd = numberEvenOrOdd(n);
-
-    if(numberIsOdd) {
+    if (isOdd(n)) {
         cout << "Number is Odd";
     }
     else {
         cout << "Number is Even";
     }
-    
+
     return 0;
 }
