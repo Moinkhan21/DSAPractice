@@ -6,7 +6,7 @@ using namespace std;
 // FUNCTION: findingTemperature()
 // ----------------------------------------------------------------------
 // PURPOSE:
-//   Converts temperature from Celsius to
+//   Converts temperature from Celsius to Kelvin and Fahrenheit.
 //     • Kelvin
 //     • Fahrenheit
 //
