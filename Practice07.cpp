@@ -5,7 +5,7 @@ using namespace std;
 // FUNCTION: reverseTheNumber()
 // ----------------------------------------------------------------------
 // PURPOSE:
-//   Reverses the digits of a given integer.
+//   Reverses the digits of a given integer
 //
 // EXAMPLE:
 //   Input:  123 → Output: 321
